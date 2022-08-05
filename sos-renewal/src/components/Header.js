@@ -1,6 +1,7 @@
 import {
   HeaderWrapper,
   HeaderLogo,
+  HeaderSearchBox,
 
 } from './StyledComponent';
 
@@ -9,6 +10,7 @@ const Header = () => {
     <>
       <HeaderWrapper>
         <HeaderLogo />
+        <HeaderSearchBox />
       </HeaderWrapper>
     </>
   );
