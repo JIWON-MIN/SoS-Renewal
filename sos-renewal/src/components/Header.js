@@ -2,7 +2,8 @@ import {
   HeaderWrapper,
   HeaderLogo,
   HeaderSearchBox,
-
+  HeaderSearchInput,
+  HeaderSearchIcon
 } from './StyledComponent';
 
 const Header = () => {
@@ -10,7 +11,10 @@ const Header = () => {
     <>
       <HeaderWrapper>
         <HeaderLogo />
-        <HeaderSearchBox />
+        <HeaderSearchBox>
+          <HeaderSearchInput />
+          <HeaderSearchIcon />
+        </HeaderSearchBox>
       </HeaderWrapper>
     </>
   );
