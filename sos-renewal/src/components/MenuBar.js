@@ -21,8 +21,8 @@ const MenuBar = () => {
         <MenuBarTitle>학부 소개</MenuBarTitle>
         <MenuBarTitle>학사 정보</MenuBarTitle>
         <MenuBarTitle>대학원</MenuBarTitle>
-        <MenuBarTitle>공학 인증</MenuBarTitle>
         <MenuBarTitle>SW중심대학</MenuBarTitle>
+        <MenuBarTitle>공학 인증</MenuBarTitle>
         <MenuBarTitle>서울 어코드</MenuBarTitle>
         <MenuBarTitle>커뮤니티</MenuBarTitle>
       </MenuBarTitleWrapper>
@@ -95,7 +95,7 @@ const MenuBar = () => {
       ) : (
         ""
       )}
-      
+
     </MenuBarWrapper>
     
     </>
