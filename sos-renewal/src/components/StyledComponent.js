@@ -32,6 +32,7 @@ export const HeaderSearchBox = styled.div`
   background: #FFFFFF;
   border: 1px solid #BBBBBB;
   border-radius: 10px;
+  
 `;
 
 export const HeaderSearchInput = styled.input`
@@ -42,10 +43,11 @@ export const HeaderSearchInput = styled.input`
 `;
 
 export const HeaderSearchIcon = styled(HiOutlineSearch)`
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
   margin-right: 10px;
   color: gray;
+  cursor: pointer;
 `;
 
 //////////////////// MenuBar ////////////////////
@@ -53,6 +55,7 @@ export const MenuBarWrapper = styled.div`
   position: absolute;
   width: 100%;
   top: 80px;
+  cursor: pointer;
 `;
 
 export const MenuBarTitleWrapper = styled.div`
@@ -74,8 +77,13 @@ export const MenuBarTitle = styled.div`
   display : flex;
   justify-content : center;
   align-items : center;
+
+  &:hover {
+    font-weight: 500;
+  }
   
-`
+
+`;
 export const MenuBarActivatedWrapper = styled.div`
   position: relative;
   width: 100%;
@@ -84,7 +92,10 @@ export const MenuBarActivatedWrapper = styled.div`
 
   background-color: white;
   //background-color: lightgray;
-`
+  z-index: 1;
+
+
+`;
 export const MenuBarActivatedBox = styled.div`
   width: 250px;
   height: 300px;
@@ -94,7 +105,7 @@ export const MenuBarActivatedBox = styled.div`
 
   background-color: white;
   //background-color: pink;
-`
+`;
 export const MenuBarActivatedDetail = styled.div`
   width: 100%;
   height: 50px;
@@ -107,7 +118,13 @@ export const MenuBarActivatedDetail = styled.div`
   color: #6C6C6C;
 
   background-color: white;
-`
+
+  &:hover {
+    font-size: 16px;
+    color: black;
+  }
+  
+`;
 
 export const MenuBarActivatedVertical = styled.div`
   height: 280px;
@@ -115,6 +132,5 @@ export const MenuBarActivatedVertical = styled.div`
   margin-top: 20px;
   background-color: #CECECE;
 
-`
-
+`;
 

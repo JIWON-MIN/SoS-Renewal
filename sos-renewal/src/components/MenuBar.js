@@ -1,3 +1,4 @@
+import React, {  useState } from 'react';
 import {
   MenuBarWrapper,
   MenuBarTitleWrapper,
@@ -8,9 +9,14 @@ import {
   MenuBarActivatedVertical,
 } from './StyledComponent';
 const MenuBar = () => {
+  const [isHovering, setIsHovering] = useState(0);
+
   return (
     <>
-    <MenuBarWrapper>
+    <MenuBarWrapper 
+      onMouseOver={() => setIsHovering(1)}
+      onMouseOut={() => setIsHovering(0)}
+    >
       <MenuBarTitleWrapper>
         <MenuBarTitle>학부 소개</MenuBarTitle>
         <MenuBarTitle>학사 정보</MenuBarTitle>
@@ -20,8 +26,9 @@ const MenuBar = () => {
         <MenuBarTitle>서울 어코드</MenuBarTitle>
         <MenuBarTitle>커뮤니티</MenuBarTitle>
       </MenuBarTitleWrapper>
-
-      <MenuBarActivatedWrapper>
+  
+      {isHovering ? (
+        <MenuBarActivatedWrapper>
         <MenuBarActivatedBox class="introduce">
           <MenuBarActivatedDetail>학부장 인사말</MenuBarActivatedDetail>
           <MenuBarActivatedDetail>연혁</MenuBarActivatedDetail>
@@ -85,6 +92,10 @@ const MenuBar = () => {
           <MenuBarActivatedDetail>취업정보</MenuBarActivatedDetail>
         </MenuBarActivatedBox>
       </MenuBarActivatedWrapper>
+      ) : (
+        ""
+      )}
+      
     </MenuBarWrapper>
     
     </>
