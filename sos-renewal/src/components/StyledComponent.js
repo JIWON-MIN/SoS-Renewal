@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import MainLogo from '../icons/MainLogo.png';
+import MainPicture1 from '../icons/MainPicture1.png';
 import { HiOutlineSearch } from 'react-icons/hi';
 
 //////////////////// Header ////////////////////
@@ -134,3 +135,27 @@ export const MenuBarActivatedVertical = styled.div`
 
 `;
 
+//////////////////// MainTop ////////////////////
+
+export const MainTopWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 650px;
+  top: 135px;
+  //background-color: gray;
+`;
+
+export const MainTopImage = styled.div`
+  position: absolute;
+  background-image: url(${MainPicture1});
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+`
+
+export const MainTopBox = styled.div`
+  position: absolute;
+  width: 630px;
+  height: 100%;
+  background-color: rgba(102, 151, 172, 0.7);
+`

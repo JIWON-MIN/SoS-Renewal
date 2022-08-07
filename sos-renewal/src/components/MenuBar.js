@@ -9,13 +9,13 @@ import {
   MenuBarActivatedVertical,
 } from './StyledComponent';
 const MenuBar = () => {
-  const [isHovering, setIsHovering] = useState(0);
+  const [isMenuActivating, setIsMenuActivating] = useState(0);
 
   return (
     <>
     <MenuBarWrapper 
-      onMouseOver={() => setIsHovering(1)}
-      onMouseOut={() => setIsHovering(0)}
+      onMouseOver={() => setIsMenuActivating(1)}
+      onMouseOut={() => setIsMenuActivating(0)}
     >
       <MenuBarTitleWrapper>
         <MenuBarTitle>학부 소개</MenuBarTitle>
@@ -27,7 +27,7 @@ const MenuBar = () => {
         <MenuBarTitle>커뮤니티</MenuBarTitle>
       </MenuBarTitleWrapper>
   
-      {isHovering ? (
+      {isMenuActivating ? (
         <MenuBarActivatedWrapper>
         <MenuBarActivatedBox class="introduce">
           <MenuBarActivatedDetail>학부장 인사말</MenuBarActivatedDetail>
