@@ -114,14 +114,15 @@ export const MenuBarActivatedDetail = styled.div`
   display: flex;
   align-items: center;
 
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 100;
   color: #6C6C6C;
 
   background-color: white;
 
   &:hover {
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 800;
     color: black;
   }
   
@@ -158,4 +159,21 @@ export const MainTopBox = styled.div`
   width: 630px;
   height: 100%;
   background-color: rgba(102, 151, 172, 0.7);
+`
+
+export const MainTopBoxTitle = styled.div`
+  
+`
+
+export const MainTopBoxDetail = styled.div`
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+
+
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 40px;
+
 `
