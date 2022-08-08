@@ -7,26 +7,30 @@ import { FiArrowRightCircle } from 'react-icons/fi';
 //////////////////// Header ////////////////////
 export const HeaderWrapper = styled.div`
   position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 60px;
+  background-color: white;
+  z-index: 1;
 `;
 
 export const HeaderLogo = styled.div`
+  //position: fixed;
   background-image: url(${MainLogo});
   background-size: 200px 50px;
   background-repeat: no-repeat;
   width: 240px;
   height: 48px;
-  margin-left: 80px;
+  margin-left: 120px;
 `;
 
 export const HeaderSearchBox = styled.div`
   width: 230px;
   height: 30px;
-  margin-right: 80px;
+  margin-right: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,7 +74,7 @@ export const MenuBarTitleWrapper = styled.div`
 `;
 
 export const MenuBarTitle = styled.div`
-  width: 250px;
+  width: 220px;
   height: 55px;
   background: #08517A;
   font-size: 20px;
@@ -95,7 +99,7 @@ export const MenuBarActivatedWrapper = styled.div`
 `;
 
 export const MenuBarActivatedBox = styled.div`
-  width: 250px;
+  width: 220px;
   height: 300px;
   padding: 10px 0;
   display: flex;
@@ -110,14 +114,14 @@ export const MenuBarActivatedDetail = styled.div`
   display: flex;
   align-items: center;
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 100;
   color: #6C6C6C;
 
   background-color: white;
 
   &:hover {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 800;
     color: black;
   }
@@ -138,7 +142,7 @@ export const MainTopWrapper = styled.div`
   width: 100%;
   height: 650px;
   // margin-top: 0px;
-  top: 110px;
+  top: 115px;
   overflow: hidden;
 `;
 
