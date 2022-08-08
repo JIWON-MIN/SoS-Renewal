@@ -162,6 +162,11 @@ export const MainTopBox = styled.div`
 `
 
 export const MainTopBoxTitle = styled.div`
+  position: absolute;
+  left: 40px;
+  top: 40px;
+
+  font-size: 50px;
   
 `
 
@@ -175,5 +180,4 @@ export const MainTopBoxDetail = styled.div`
   font-weight: 400;
   font-size: 23px;
   line-height: 40px;
-
 `
