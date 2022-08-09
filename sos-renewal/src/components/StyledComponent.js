@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import MainLogo from '../icons/MainLogo.png';
 import MainPicture4 from '../icons/MainPicture4.jpg';
+import FaculityLogo from '../icons/FaculityLogo.png';
+import CurriculumLogo from '../icons/CurriculumLogo.png';
+import ProgramLogo from '../icons/ProgramLogo.png';
+import TrackLogo from '../icons/TrackLogo.png';
 import { HiOutlineSearch } from 'react-icons/hi';
 import { FiArrowRightCircle } from 'react-icons/fi';
 
@@ -25,6 +29,7 @@ export const HeaderLogo = styled.div`
   width: 240px;
   height: 48px;
   margin-left: 120px;
+  cursor : pointer;
 `;
 
 export const HeaderSearchBox = styled.div`
@@ -138,7 +143,7 @@ export const MenuBarActivatedVertical = styled.div`
 //////////////////// MainTop ////////////////////
 
 export const MainTopWrapper = styled.div`
-  position: absolute;
+  //position: absolute;
   width: 100%;
   height: 70%;
   // margin-top: 0px;
@@ -151,14 +156,14 @@ export const MainTopImage = styled.div`
   background-image: url(${MainPicture4});
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 70%;
   background-position: bottom;
 `
 
 export const MainTopBox = styled.div`
   position: absolute;
   width: 35%;
-  height: 100%;
+  height: 70%;
   background-color: rgba(102, 151, 172, 0.7);
 `
 
@@ -184,11 +189,10 @@ export const MainTopBoxDetail = styled.div`
 //////////////////// MainCon ////////////////////
 
 export const MainConWrapper = styled.div`
-  position: absolute;
+  // position: absolute;
   width: 100%;
-  height: 600px;
-  top: 80%;
-  margin-top: 0px;
+  height: 500px;
+  margin: 30px 0px 30px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,8 +200,8 @@ export const MainConWrapper = styled.div`
 
 export const MainConBox = styled.div`
   width: 600px;
-  height: 500px;
-  margin: 50px;
+  height: 100%;
+  margin: 30px;
   // overflow: hidden;
 `;
 
@@ -226,26 +230,97 @@ export const MainConList = styled.div`
 //////////////////// Shortcuts ////////////////////
 
 export const ShortCutsWrapper = styled.div`
+  position: relative;
+  width: 100%;
 
+  display: flex;
+  justify-content: center;
 `;
 
-export const ShrotCutsBox = styled.div`
-
+export const ShortCutsBox = styled.div`
+  position: relative;
+  width: 340px;
+  height: 150px;
+  border: 1px solid rgba(205, 205, 205, 1);
+  cursor : pointer;
 `;
 
 export const ShortCutsTitle = styled.div`
+  margin : 15px;
+  font-size: 19px;
+  font-weight: 600;
+  display: flex;
+`;
 
-
+export const ShortCutsMainTitle = styled.div`
+  color: rgba(74, 74, 74, 1);
 `;
 
 export const ShortCutsSubTitle = styled.div`
-
-`;
-
-export const ShortCutsIcon = styled.div`
-
+  margin : 0px 10px;
+  color: rgba(0, 128, 190, 1);
+  z-index: 999;
 `;
 
 export const ShortCutsContents = styled.div`
-
+  position: relative;
+  width: 250px;
+  margin: 0px 15px;
+  font-size: 14px;
+  line-height: 25px;
+  color: rgba(119, 119, 119, 1);
+  z-index: 999;
 `;
+
+export const ShortCutsIcon1 = styled.div`
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: 10px;
+  bottom: 10px;
+  background-image: url(${FaculityLogo});
+  background-size: 120px;
+`;
+
+export const ShortCutsIcon2 = styled.div`
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: 10px;
+  bottom: 10px;
+  background-image: url(${CurriculumLogo});
+  background-size: 120px;
+`;
+
+export const ShortCutsIcon3 = styled.div`
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: 10px;
+  bottom: 10px;
+  background-image: url(${ProgramLogo});
+  background-size: 120px;
+`;
+
+export const ShortCutsIcon4 = styled.div`
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: 10px;
+  bottom: 10px;
+  background-image: url(${TrackLogo});
+  background-size: 120px;
+`;
+
+
+//////////////////// Footer ////////////////////
+
+export const FooterWrapper = styled.div`
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  height: 130px;
+  background-color: rgba(233, 233, 233, 1);
+  display: flex;
+  justify-content: center;
+`
