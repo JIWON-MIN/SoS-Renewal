@@ -74,10 +74,10 @@ export const MenuBarTitleWrapper = styled.div`
 `;
 
 export const MenuBarTitle = styled.div`
-  width: 220px;
+  width: 200px;
   height: 55px;
   background: #08517A;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   color: white;
   display : flex;
@@ -99,7 +99,7 @@ export const MenuBarActivatedWrapper = styled.div`
 `;
 
 export const MenuBarActivatedBox = styled.div`
-  width: 220px;
+  width: 200px;
   height: 300px;
   padding: 10px 0;
   display: flex;
@@ -110,18 +110,18 @@ export const MenuBarActivatedBox = styled.div`
 export const MenuBarActivatedDetail = styled.div`
   width: 100%;
   height: 50px;
-  margin-left: 60px;
+  margin-left: 40px;
   display: flex;
   align-items: center;
 
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 100;
   color: #6C6C6C;
 
   background-color: white;
 
   &:hover {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 800;
     color: black;
   }
@@ -140,7 +140,7 @@ export const MenuBarActivatedVertical = styled.div`
 export const MainTopWrapper = styled.div`
   position: absolute;
   width: 100%;
-  height: 650px;
+  height: 70%;
   // margin-top: 0px;
   top: 115px;
   overflow: hidden;
@@ -149,14 +149,15 @@ export const MainTopWrapper = styled.div`
 export const MainTopImage = styled.div`
   position: absolute;
   background-image: url(${MainPicture4});
-  background-size: 100% 100%;
-  width: 120%;
+  background-size: cover;
+  width: 100%;
   height: 100%;
+  background-position: bottom;
 `
 
 export const MainTopBox = styled.div`
   position: absolute;
-  width: 630px;
+  width: 35%;
   height: 100%;
   background-color: rgba(102, 151, 172, 0.7);
 `
@@ -186,7 +187,7 @@ export const MainConWrapper = styled.div`
   position: absolute;
   width: 100%;
   height: 600px;
-  top: 750px;
+  top: 80%;
   margin-top: 0px;
   display: flex;
   justify-content: center;
@@ -194,8 +195,8 @@ export const MainConWrapper = styled.div`
 `;
 
 export const MainConBox = styled.div`
-  width: 35%;
-  height: 80%;
+  width: 600px;
+  height: 500px;
   margin: 50px;
   // overflow: hidden;
 `;
