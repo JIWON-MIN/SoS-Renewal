@@ -1,3 +1,4 @@
+import GlobalStyle from './global';
 import Header from './components/Header';
 import MenuBar from './components/MenuBar';
 import MainTop from './components/MainTop';
@@ -20,6 +21,7 @@ const ContentsWrapper = styled.div`
 function App() {
   return (
     <>
+      <GlobalStyle />
       <Header />
       <MenuBar />
       <ContentsWrapper>

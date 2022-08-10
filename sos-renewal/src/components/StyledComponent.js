@@ -166,14 +166,22 @@ export const MainTopBox = styled.div`
   width: 35%;
   height: 70%;
   background-color: rgba(102, 151, 172, 0.7);
+  font-family: 'Gowun Batang', serif;
 `
 
 export const MainTopBoxTitle = styled.div`
   position: absolute;
   left: 40px;
   top: 40px;
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: 600;
+  color: rgb(0, 93, 129);
 `
+
+export const MainTopBoxTitleWhite = styled.span`
+  color: #FFFFFF;
+  font-size: 80px;
+`;
 
 export const MainTopBoxDetail = styled.div`
   position: absolute;
@@ -181,9 +189,9 @@ export const MainTopBoxDetail = styled.div`
   bottom: 40px;
 
   color: #FFFFFF;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 22px;
-  line-height: 40px;
+  line-height: 35px;
 `
 
 
@@ -258,11 +266,6 @@ export const MainConListDate = styled.div`
 `;
 
 
-
-
-
-
-
 //////////////////// Shortcuts ////////////////////
 
 export const ShortCutsWrapper = styled.div`
@@ -312,7 +315,7 @@ export const ShortCutsIcon1 = styled.div`
   position: absolute;
   width: 120px;
   height: 120px;
-  right: 10px;
+  right: 5px;
   bottom: 10px;
   background-image: url(${FaculityLogo});
   background-size: 120px;
@@ -322,7 +325,7 @@ export const ShortCutsIcon2 = styled.div`
   position: absolute;
   width: 120px;
   height: 120px;
-  right: 10px;
+  right: 5px;
   bottom: 10px;
   background-image: url(${CurriculumLogo});
   background-size: 120px;
@@ -332,7 +335,7 @@ export const ShortCutsIcon3 = styled.div`
   position: absolute;
   width: 120px;
   height: 120px;
-  right: 10px;
+  right: 5px;
   bottom: 10px;
   background-image: url(${ProgramLogo});
   background-size: 120px;
@@ -342,7 +345,7 @@ export const ShortCutsIcon4 = styled.div`
   position: absolute;
   width: 120px;
   height: 120px;
-  right: 10px;
+  right: 5px;
   bottom: 10px;
   background-image: url(${TrackLogo});
   background-size: 120px;

@@ -4,7 +4,7 @@ import {
   MainTopBox,
   MainTopBoxTitle,
   MainTopBoxDetail,
-
+  MainTopBoxTitleWhite,
 } from './StyledComponent';
 
 const MainTop = () => {
@@ -14,8 +14,8 @@ const MainTop = () => {
       <MainTopImage />
       <MainTopBox>
         <MainTopBoxTitle>
-          꿈과 열정이 있는 <br />
-          그대를 위한 SoS
+          <MainTopBoxTitleWhite>꿈</MainTopBoxTitleWhite>과 <MainTopBoxTitleWhite>열정</MainTopBoxTitleWhite>이 있는 <br />
+          그대를 위한 <MainTopBoxTitleWhite>SoS</MainTopBoxTitleWhite>
         </MainTopBoxTitle>
         <MainTopBoxDetail>
           1970년 국내 최초의<br />
