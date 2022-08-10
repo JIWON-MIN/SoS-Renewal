@@ -171,7 +171,7 @@ export const MainTopBox = styled.div`
 
 export const MainTopBoxTitle = styled.div`
   position: absolute;
-  left: 40px;
+  left: 100px;
   top: 40px;
   font-size: 60px;
   font-weight: 600;
@@ -185,7 +185,7 @@ export const MainTopBoxTitleWhite = styled.span`
 
 export const MainTopBoxDetail = styled.div`
   position: absolute;
-  left: 40px;
+  left: 100px;
   bottom: 40px;
 
   color: #FFFFFF;
