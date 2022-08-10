@@ -5,6 +5,7 @@ import FaculityLogo from '../icons/FaculityLogo.png';
 import CurriculumLogo from '../icons/CurriculumLogo.png';
 import ProgramLogo from '../icons/ProgramLogo.png';
 import TrackLogo from '../icons/TrackLogo.png';
+import brochure from '../icons/brochure.gif';
 import { HiOutlineSearch } from 'react-icons/hi';
 import { FiArrowRightCircle } from 'react-icons/fi';
 
@@ -232,9 +233,9 @@ export const MainConList = styled.div`
 export const ShortCutsWrapper = styled.div`
   position: relative;
   width: 100%;
-
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 `;
 
 export const ShortCutsBox = styled.div`
@@ -317,10 +318,59 @@ export const ShortCutsIcon4 = styled.div`
 
 export const FooterWrapper = styled.div`
   position: relative;
-  margin-top: 50px;
   width: 100%;
   height: 130px;
   background-color: rgba(233, 233, 233, 1);
-  display: flex;
-  justify-content: center;
+`
+
+export const FooterBox = styled.div`
+  width: 1260px;
+  margin: 0 auto;
+`;
+
+
+export const FooterSiteBox = styled.div`
+  position: relative;
+  height: 40px;
+  background-color: white;
+  border: 1px solid rgb(219,219,219);
+  top: 20px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+`;
+
+export const FooterSiteBoxTitle = styled.span`
+  color: rgb(60, 93, 144);
+  padding: 0 50px 0;
+  border-right: 3px solid rgb(219,219,219);
+`;
+
+export const FooterSiteBoxEle = styled.span`
+  color: rgb(121, 121, 121);
+  padding: 0 65px 0;
+  cursor: pointer;
+
+  &:hover {
+    font-weight: 800;
+    color: black;
+  }
+`;
+
+export const FooterInform = styled.span`
+  position: relative;
+  top: 30px;
+  width: 1260px;
+  margin: 0 auto;
+  color: rgb(74, 74, 74);
+`
+
+export const FooterBrochure = styled.div`
+  background-image: url(${brochure});
+  width: 150px;
+  height: 40px;
+  background-position: bottom;
+  float: right;
+  margin-top: 10px;
+  cursor: pointer;
 `
