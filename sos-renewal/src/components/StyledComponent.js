@@ -222,11 +222,46 @@ export const MainConButton = styled(FiArrowRightCircle)`
   cursor: pointer;
 `;
 
-export const MainConList = styled.div`
+export const MainConListWrapper = styled.div`
+  position: relative;
   height: 400px;
   margin-top: 10px;
-  border: 1px solid gray;
+  //background-color: gray;
+
 `;
+
+export const MainConListElement = styled.div`
+  position: relative;
+  height: 50px;
+  border-bottom: 1px solid rgba(205, 205, 205, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+`;
+
+export const MainConListTitle = styled.div`
+  width: 500px;
+  margin-left: 15px;
+  font-size: 16px;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+`;
+
+
+export const MainConListDate = styled.div`
+  margin-right: 15px;
+  font-size: 14px;
+  color: rgba(119, 119, 119, 1);
+`;
+
+
+
+
+
+
 
 //////////////////// Shortcuts ////////////////////
 
@@ -235,12 +270,12 @@ export const ShortCutsWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 `;
 
 export const ShortCutsBox = styled.div`
   position: relative;
-  width: 340px;
+  width: 315px;
   height: 150px;
   border: 1px solid rgba(205, 205, 205, 1);
   cursor : pointer;
