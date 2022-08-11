@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import MainLogo from '../icons/MainLogo.png';
 import MainPicture4 from '../icons/MainPicture4.jpg';
 import FaculityLogo from '../icons/FaculityLogo.png';
@@ -161,12 +161,43 @@ export const MainTopImage = styled.div`
   background-position: bottom;
 `
 
+
+//////////////////// Box-animation ////////////////////
+
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+`
+
+const SlideToRight = keyframes`
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+`
+
+
+
 export const MainTopBox = styled.div`
   position: absolute;
-  width: 35%;
+  width: 40%;
   height: 70%;
-  background-color: rgba(102, 151, 172, 0.7);
+
+
+  // background-color: rgba(102, 151, 172, 0.6);
+  background: 
+    linear-gradient(to right, rgba(102, 151, 172, 0.7) 70% ,  rgba(102, 151, 172, 0));
+
   font-family: 'Gowun Batang', serif;
+
+  animation: ${fadeIn} 0.8s ease-in-out forwards;
 `
 
 export const MainTopBoxTitle = styled.div`
@@ -176,6 +207,8 @@ export const MainTopBoxTitle = styled.div`
   font-size: 60px;
   font-weight: 600;
   color: rgb(0, 93, 129);
+
+  animation: ${SlideToRight} 0.8s ease-out forwards;
 `
 
 export const MainTopBoxTitleWhite = styled.span`
@@ -192,6 +225,9 @@ export const MainTopBoxDetail = styled.div`
   font-weight: 500;
   font-size: 22px;
   line-height: 35px;
+
+  animation: ${SlideToRight} 0.8s ease-out 0.6s forwards;
+
 `
 
 
