@@ -142,7 +142,6 @@ export const MenuBarActivatedVertical = styled.div`
 `;
 
 //////////////////// MainTop ////////////////////
-
 export const MainTopWrapper = styled.div`
   //position: absolute;
   width: 100%;
@@ -162,9 +161,7 @@ export const MainTopImage = styled.div`
 `
 
 
-//////////////////// Box-animation ////////////////////
-
-
+// Box-animation //
 const fadeIn = keyframes`
   from {
     opacity: 0
@@ -173,8 +170,7 @@ const fadeIn = keyframes`
     opacity: 1
   }
 `
-
-const SlideToRight = keyframes`
+const slideToRight = keyframes`
   from {
     transform: translateX(-300px);
   }
@@ -183,15 +179,10 @@ const SlideToRight = keyframes`
   }
 `
 
-
-
 export const MainTopBox = styled.div`
   position: absolute;
   width: 40%;
   height: 70%;
-
-
-  // background-color: rgba(102, 151, 172, 0.6);
   background: 
     linear-gradient(to right, rgba(102, 151, 172, 0.7) 70% ,  rgba(102, 151, 172, 0));
 
@@ -208,7 +199,7 @@ export const MainTopBoxTitle = styled.div`
   font-weight: 600;
   color: rgb(0, 93, 129);
 
-  animation: ${SlideToRight} 0.8s ease-out forwards;
+  animation: ${slideToRight} 0.8s ease-out forwards;
 `
 
 export const MainTopBoxTitleWhite = styled.span`
@@ -226,13 +217,11 @@ export const MainTopBoxDetail = styled.div`
   font-size: 22px;
   line-height: 35px;
 
-  animation: ${SlideToRight} 0.8s ease-out 0.6s forwards;
+  animation: ${slideToRight} 0.8s ease-out 0.6s forwards;
 
 `
 
-
 //////////////////// MainCon ////////////////////
-
 export const MainConWrapper = styled.div`
   // position: absolute;
   width: 100%;
@@ -303,7 +292,6 @@ export const MainConListDate = styled.div`
 
 
 //////////////////// Shortcuts ////////////////////
-
 export const ShortCutsWrapper = styled.div`
   position: relative;
   width: 100%;
@@ -389,7 +377,6 @@ export const ShortCutsIcon4 = styled.div`
 
 
 //////////////////// Footer ////////////////////
-
 export const FooterWrapper = styled.div`
   position: relative;
   width: 100%;
