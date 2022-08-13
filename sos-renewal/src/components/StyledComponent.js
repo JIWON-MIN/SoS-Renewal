@@ -1,13 +1,10 @@
 import styled, {keyframes} from 'styled-components';
 import MainLogo from '../icons/MainLogo.png';
-import MainPicture4 from '../icons/MainPicture4.jpg';
-import FaculityLogo from '../icons/FaculityLogo.png';
-import CurriculumLogo from '../icons/CurriculumLogo.png';
-import ProgramLogo from '../icons/ProgramLogo.png';
-import TrackLogo from '../icons/TrackLogo.png';
 import brochure from '../icons/brochure.gif';
 import { HiOutlineSearch } from 'react-icons/hi';
 import { FiArrowRightCircle } from 'react-icons/fi';
+
+
 
 //////////////////// Header ////////////////////
 export const HeaderWrapper = styled.div`
@@ -19,7 +16,7 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   height: 60px;
   background-color: white;
-  z-index: 1;
+  z-index: 100;
 `;
 
 export const HeaderLogo = styled.div`
@@ -68,6 +65,7 @@ export const MenuBarWrapper = styled.div`
   width: 100%;
   top: 60px;
   cursor: pointer;
+  z-index: 10;
 `;
 
 export const MenuBarTitleWrapper = styled.div`
@@ -151,14 +149,25 @@ export const MainTopWrapper = styled.div`
   overflow: hidden;
 `;
 
+export const MainTopImageWrapper = styled.div`
+  width: 100%;
+  display: flex;  //이미지 가로로 나열
+`
+
+
 export const MainTopImage = styled.div`
   position: absolute;
-  background-image: url(${MainPicture4});
-  background-size: cover;
   width: 100%;
   height: 70%;
   background-position: bottom;
-`
+  ${(props) => {
+    const img = props.img;
+    return`
+      background-image: url(${img});
+      background-size: cover;
+    `;
+  }}
+`;
 
 
 // Box-animation //
@@ -170,7 +179,7 @@ const fadeIn = keyframes`
     opacity: 1
   }
 `
-const slideToRight = keyframes`
+const MainTopBoxConSlide = keyframes`
   from {
     transform: translateX(-300px);
   }
@@ -187,7 +196,7 @@ export const MainTopBox = styled.div`
     linear-gradient(to right, rgba(102, 151, 172, 0.7) 70% ,  rgba(102, 151, 172, 0));
 
   font-family: 'Gowun Batang', serif;
-
+  z-index: 5;
   animation: ${fadeIn} 0.8s ease-in-out forwards;
 `
 
@@ -199,7 +208,7 @@ export const MainTopBoxTitle = styled.div`
   font-weight: 600;
   color: rgb(0, 93, 129);
 
-  animation: ${slideToRight} 0.8s ease-out forwards;
+  animation: ${MainTopBoxConSlide} 0.8s ease-out forwards;
 `
 
 export const MainTopBoxTitleWhite = styled.span`
@@ -217,7 +226,7 @@ export const MainTopBoxDetail = styled.div`
   font-size: 22px;
   line-height: 35px;
 
-  animation: ${slideToRight} 0.8s ease-out 0.6s forwards;
+  animation: ${MainTopBoxConSlide} 0.8s ease-out 0.6s forwards;
 
 `
 
@@ -335,46 +344,20 @@ export const ShortCutsContents = styled.div`
   z-index: 999;
 `;
 
-export const ShortCutsIcon1 = styled.div`
+export const ShortCutsIcon = styled.div`
   position: absolute;
   width: 120px;
   height: 120px;
   right: 5px;
   bottom: 10px;
-  background-image: url(${FaculityLogo});
-  background-size: 120px;
+  ${(props) => {
+    const logo = props.logo;
+    return `
+      background-image: url(${logo});
+      background-size: 120px;
+    `;
+  }}
 `;
-
-export const ShortCutsIcon2 = styled.div`
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  right: 5px;
-  bottom: 10px;
-  background-image: url(${CurriculumLogo});
-  background-size: 120px;
-`;
-
-export const ShortCutsIcon3 = styled.div`
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  right: 5px;
-  bottom: 10px;
-  background-image: url(${ProgramLogo});
-  background-size: 120px;
-`;
-
-export const ShortCutsIcon4 = styled.div`
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  right: 5px;
-  bottom: 10px;
-  background-image: url(${TrackLogo});
-  background-size: 120px;
-`;
-
 
 //////////////////// Footer ////////////////////
 export const FooterWrapper = styled.div`
