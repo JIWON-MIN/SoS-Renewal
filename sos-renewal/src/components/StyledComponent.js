@@ -16,7 +16,7 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   height: 60px;
   background-color: white;
-  z-index: 100;
+  z-index: 99999;
 `;
 
 export const HeaderLogo = styled.div`
@@ -147,12 +147,14 @@ export const MainTopWrapper = styled.div`
   // margin-top: 0px;
   top: 115px;
   overflow: hidden;
+  
 `;
 
-export const MainTopImageWrapper = styled.div`
-  width: 100%;
-  display: flex;  //이미지 가로로 나열
-`
+export const MainTopImageSlideWrapper = styled.div`
+  position: relative
+  z-index: 1;
+
+`;
 
 
 export const MainTopImage = styled.div`
@@ -233,12 +235,15 @@ export const MainTopBoxDetail = styled.div`
 //////////////////// MainCon ////////////////////
 export const MainConWrapper = styled.div`
   // position: absolute;
+  position: relative;
   width: 100%;
   height: 500px;
   margin: 30px 0px 30px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 55;
+
 `;
 
 export const MainConBox = styled.div`
@@ -246,6 +251,7 @@ export const MainConBox = styled.div`
   height: 100%;
   margin: 30px;
   // overflow: hidden;
+  z-index: 55;
 `;
 
 export const MainConTitle = styled.div`
@@ -269,7 +275,7 @@ export const MainConListWrapper = styled.div`
   height: 400px;
   margin-top: 10px;
   //background-color: gray;
-
+  z-index: 55;
 `;
 
 export const MainConListElement = styled.div`
@@ -280,7 +286,7 @@ export const MainConListElement = styled.div`
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-
+  z-index: 55;
 `;
 
 export const MainConListTitle = styled.div`

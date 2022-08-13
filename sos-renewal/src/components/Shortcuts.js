@@ -6,10 +6,6 @@ import {
   ShortCutsSubTitle,
   ShortCutsContents,
   ShortCutsIcon,
-  ShortCutsIcon2,
-  ShortCutsIcon3,
-  ShortCutsIcon4,
-  
 } from './StyledComponent';
 
 import FaculityLogo from '../icons/FaculityLogo.png';

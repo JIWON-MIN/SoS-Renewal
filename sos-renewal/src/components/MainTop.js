@@ -6,7 +6,7 @@ import {
   MainTopBoxTitle,
   MainTopBoxDetail,
   MainTopBoxTitleWhite,
-  MainTopImageWrapper,
+  MainTopImageSlideWrapper,
 } from './StyledComponent';
 import ImageSlider, { Slide } from "react-auto-image-slider";
 import MainPicture3 from '../icons/MainPicture3.jpg';
@@ -14,31 +14,11 @@ import MainPicture4 from '../icons/MainPicture4.jpg';
 import MainPicture5 from '../icons/MainPicture5.jpg';
 
 
-
-
-
-
 const MainTop = () => {
-
-
 
   return (
     <>
     <MainTopWrapper>
-      {/* <MainTopImageWrapper>
-        <MainTopImage img = {MainPicture3}/>
-        <MainTopImage img = {MainPicture4}/>
-        <MainTopImage img = {MainPicture5}/>
-      </MainTopImageWrapper> */}
-      
-
-
-
-
-
-
-
-
       <MainTopBox>
         <MainTopBoxTitle>
           <MainTopBoxTitleWhite>꿈</MainTopBoxTitleWhite>과 <MainTopBoxTitleWhite>열정</MainTopBoxTitleWhite>이 있는 <br />
@@ -52,18 +32,19 @@ const MainTop = () => {
         </MainTopBoxDetail>
       </MainTopBox>
 
-      <ImageSlider effectDelay={700} autoPlayDelay={3000}>
-        <Slide>
-          <MainTopImage img = {MainPicture3}/>
-        </Slide>
-        <Slide>
-          <MainTopImage img = {MainPicture4}/>
-        </Slide>
-        <Slide>
-          <MainTopImage img = {MainPicture5}/>
-        </Slide>
-      </ImageSlider>
-
+      <MainTopImageSlideWrapper>
+        <ImageSlider effectDelay={700} autoPlayDelay={3000}>
+          <Slide>
+            <MainTopImage img = {MainPicture3}/>
+          </Slide>
+          <Slide>
+            <MainTopImage img = {MainPicture4}/>
+          </Slide>
+          <Slide>
+            <MainTopImage img = {MainPicture5}/>
+          </Slide>
+        </ImageSlider>
+      </MainTopImageSlideWrapper>
     </MainTopWrapper>
     </>
   );
