@@ -16,11 +16,10 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   height: 60px;
   background-color: white;
-  z-index: 99999;
+  z-index: 99999;   // 가장 앞에 쌓임
 `;
 
 export const HeaderLogo = styled.div`
-  //position: fixed;
   background-image: url(${MainLogo});
   background-size: 200px 50px;
   background-repeat: no-repeat;
@@ -40,7 +39,6 @@ export const HeaderSearchBox = styled.div`
   background: #FFFFFF;
   border: 1px solid #BBBBBB;
   border-radius: 10px;
-  
 `;
 
 export const HeaderSearchInput = styled.input`
@@ -63,9 +61,9 @@ export const HeaderSearchIcon = styled(HiOutlineSearch)`
 export const MenuBarWrapper = styled.div`
   position: absolute;
   width: 100%;
-  top: 60px;
+  top: 60px;    // Header height만큼 떨어진 위치 고정
   cursor: pointer;
-  z-index: 10;
+  z-index: 10;  // MainTop 위에 쌓이도록
 `;
 
 export const MenuBarTitleWrapper = styled.div`
@@ -99,7 +97,6 @@ export const MenuBarActivatedWrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: white;
-  z-index: 1;
 `;
 
 export const MenuBarActivatedBox = styled.div`
@@ -141,23 +138,14 @@ export const MenuBarActivatedVertical = styled.div`
 
 //////////////////// MainTop ////////////////////
 export const MainTopWrapper = styled.div`
-  //position: absolute;
   width: 100%;
   height: 70%;
-  // margin-top: 0px;
-  top: 115px;
   overflow: hidden;
-  
 `;
-
-export const MainTopImageSlideWrapper = styled.div`
-  position: relative
-`;
-
 
 export const MainTopImage = styled.div`
   position: absolute;
-  width: 100%;
+  width: 120%;
   height: 70%;
   background-position: bottom;
   ${(props) => {
@@ -208,7 +196,7 @@ export const MainTopBoxTitle = styled.div`
   font-weight: 600;
   color: rgb(0, 93, 129);
 
-  animation: ${MainTopBoxConSlide} 0.8s ease-out forwards;
+  animation: ${MainTopBoxConSlide} 1.0s ease-out forwards;
 `
 
 export const MainTopBoxTitleWhite = styled.span`
@@ -220,19 +208,17 @@ export const MainTopBoxDetail = styled.div`
   position: absolute;
   left: 100px;
   bottom: 40px;
-
   color: #FFFFFF;
   font-weight: 500;
   font-size: 22px;
   line-height: 35px;
 
-  animation: ${MainTopBoxConSlide} 0.8s ease-out 0.6s forwards;
+  animation: ${MainTopBoxConSlide} 1.5s ease-out forwards;
 
 `
 
 //////////////////// MainCon ////////////////////
 export const MainConWrapper = styled.div`
-  // position: absolute;
   position: relative;
   width: 100%;
   height: 500px;
@@ -241,15 +227,12 @@ export const MainConWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: white;
-  z-index: 55;
-
 `;
 
 export const MainConBox = styled.div`
   width: 600px;
   height: 100%;
   margin: 30px;
-  // overflow: hidden;
 `;
 
 export const MainConTitle = styled.div`
@@ -272,7 +255,6 @@ export const MainConListWrapper = styled.div`
   position: relative;
   height: 400px;
   margin-top: 10px;
-  //background-color: gray;
 `;
 
 export const MainConListElement = styled.div`
@@ -283,7 +265,6 @@ export const MainConListElement = styled.div`
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-
 `;
 
 export const MainConListTitle = styled.div`
@@ -334,7 +315,7 @@ export const ShortCutsMainTitle = styled.div`
 export const ShortCutsSubTitle = styled.div`
   margin : 0px 10px;
   color: rgba(0, 128, 190, 1);
-  z-index: 999;
+  z-index: 999; //아이콘에 가려지지 않도록
 `;
 
 export const ShortCutsContents = styled.div`
@@ -344,7 +325,7 @@ export const ShortCutsContents = styled.div`
   font-size: 14px;
   line-height: 25px;
   color: rgba(119, 119, 119, 1);
-  z-index: 999;
+  z-index: 999; //아이콘에 가려지지 않도록
 `;
 
 export const ShortCutsIcon = styled.div`

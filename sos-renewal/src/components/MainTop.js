@@ -31,20 +31,17 @@ const MainTop = () => {
           소프트웨어전문 고급인력 양성<br />
         </MainTopBoxDetail>
       </MainTopBox>
-
-      <MainTopImageSlideWrapper>
-        <ImageSlider effectDelay={700} autoPlayDelay={3000}>
-          <Slide>
-            <MainTopImage img = {MainPicture3}/>
-          </Slide>
-          <Slide>
-            <MainTopImage img = {MainPicture4}/>
-          </Slide>
-          <Slide>
-            <MainTopImage img = {MainPicture5}/>
-          </Slide>
-        </ImageSlider>
-      </MainTopImageSlideWrapper>
+      <ImageSlider effectDelay={700} autoPlayDelay={3000}>
+        <Slide>
+          <MainTopImage img = {MainPicture3}/>
+        </Slide>
+        <Slide>
+          <MainTopImage img = {MainPicture4}/>
+        </Slide>
+        <Slide>
+          <MainTopImage img = {MainPicture5}/>
+        </Slide>
+      </ImageSlider>
     </MainTopWrapper>
     </>
   );
