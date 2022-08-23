@@ -141,10 +141,6 @@ const MainCon = () => {
               <MainConListCreator lists = {MainConNewsElement}></MainConListCreator>
             </MainConListWrapper>
         </MainConBox>
-
-
-
-
       </MainConWrapper>
     </>
   );

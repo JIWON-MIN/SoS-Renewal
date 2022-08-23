@@ -2,7 +2,7 @@ import styled, {keyframes} from 'styled-components';
 import MainLogo from '../icons/MainLogo.png';
 import brochure from '../icons/brochure.gif';
 import { HiOutlineSearch } from 'react-icons/hi';
-import { FiArrowRightCircle } from 'react-icons/fi';
+import { FiArrowRightCircle, FiMenu } from 'react-icons/fi';
 
 
 
@@ -64,6 +64,11 @@ export const MenuBarWrapper = styled.div`
   top: 60px;    // Header height만큼 떨어진 위치 고정
   cursor: pointer;
   z-index: 10;  // MainTop 위에 쌓이도록
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
 `;
 
 export const MenuBarTitleWrapper = styled.div`
@@ -136,6 +141,43 @@ export const MenuBarActivatedVertical = styled.div`
   background-color: #CECECE;
 `;
 
+//////////////////// SideMenu ////////////////////
+export const SideMenuIcon = styled(FiMenu)`
+  display: none;
+  position: fixed;
+  top: 12px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  color: rgba(8, 81, 122, 1);
+  cursor: pointer;
+  z-index: 99999;
+
+  @media screen and (max-width: 1200px) {
+    display: block;
+  }
+
+`;
+
+export const SideMenuWrapper = styled.div`
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 0px;
+  width: 500px;
+  height: 100%;
+  background-color: rgba(8, 81, 122, 0.8);
+  z-index: 99999;
+  ${(props)=>props.isOpen == 0 ? `transition:.3s; height: 0;`:`transition:.3s; height: 100%;`}
+
+  @media screen and (max-width: 1200px) {
+    display: block;
+  }
+`;
+
+
+
+
 //////////////////// MainTop ////////////////////
 export const MainTopWrapper = styled.div`
   width: 100%;
@@ -186,6 +228,13 @@ export const MainTopBox = styled.div`
   font-family: 'Gowun Batang', serif;
   z-index: 5;
   animation: ${fadeIn} 0.8s ease-in-out forwards;
+
+  @media screen and (max-width: 1000px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 `
 
 export const MainTopBoxTitle = styled.div`
@@ -197,11 +246,28 @@ export const MainTopBoxTitle = styled.div`
   color: rgb(0, 93, 129);
 
   animation: ${MainTopBoxConSlide} 1.0s ease-out forwards;
+
+  @media screen and (max-width: 1400px) {
+    left: 30px;
+    font-size: 45px;
+  }
+  @media screen and (max-width: 1000px) {
+    left: 30px;
+    font-size: 30px;
+  }
+
 `
 
 export const MainTopBoxTitleWhite = styled.span`
   color: #FFFFFF;
   font-size: 80px;
+
+  @media screen and (max-width: 1400px) {
+    font-size: 70px;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 60px;
+  }
 `;
 
 export const MainTopBoxDetail = styled.div`
@@ -214,6 +280,17 @@ export const MainTopBoxDetail = styled.div`
   line-height: 35px;
 
   animation: ${MainTopBoxConSlide} 1.5s ease-out forwards;
+  
+  @media screen and (max-width: 1400px) {
+    left: 40px;
+    font-size: 20px;
+    line-height: 35px;
+  }
+  @media screen and (max-width: 1000px) {
+    left: 40px;
+    font-size: 18px;
+    line-height: 30px;
+  }
 
 `
 
@@ -221,18 +298,29 @@ export const MainTopBoxDetail = styled.div`
 export const MainConWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 500px;
   margin: 30px 0px 30px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
+
+  @media screen and (max-width: 1200px) {
+    position: relative;
+    display: block;
+  }
+
 `;
 
 export const MainConBox = styled.div`
   width: 600px;
-  height: 100%;
+  height: 500px;
   margin: 30px;
+
+  @media screen and (max-width: 1200px) {
+    width: 800px;
+    margin: 30px auto;
+  }
+
 `;
 
 export const MainConTitle = styled.div`
@@ -274,6 +362,10 @@ export const MainConListTitle = styled.div`
   overflow: hidden;
   white-space:nowrap;
   text-overflow:ellipsis;
+
+  @media screen and (max-width: 1200px) {
+    width: 700px;
+  }
 `;
 
 
@@ -286,11 +378,12 @@ export const MainConListDate = styled.div`
 
 //////////////////// Shortcuts ////////////////////
 export const ShortCutsWrapper = styled.div`
-  position: relative;
+  //position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+
 `;
 
 export const ShortCutsBox = styled.div`
@@ -299,6 +392,11 @@ export const ShortCutsBox = styled.div`
   height: 150px;
   border: 1px solid rgba(205, 205, 205, 1);
   cursor : pointer;
+
+  @media screen and (max-width: 1200px) {
+    width: 250px;
+    height: 130px;
+  }
 `;
 
 export const ShortCutsTitle = styled.div`
@@ -306,6 +404,10 @@ export const ShortCutsTitle = styled.div`
   font-size: 19px;
   font-weight: 600;
   display: flex;
+  @media screen and (max-width: 1200px) {
+    font-size: 17px;
+    margin : 10px;
+  }
 `;
 
 export const ShortCutsMainTitle = styled.div`
@@ -326,6 +428,12 @@ export const ShortCutsContents = styled.div`
   line-height: 25px;
   color: rgba(119, 119, 119, 1);
   z-index: 999; //아이콘에 가려지지 않도록
+
+  @media screen and (max-width: 1200px) {
+    font-size: 13px;
+    margin : 0 10px;
+    line-height: 23px;
+  }
 `;
 
 export const ShortCutsIcon = styled.div`
@@ -341,6 +449,18 @@ export const ShortCutsIcon = styled.div`
       background-size: 120px;
     `;
   }}
+
+  @media screen and (max-width: 1200px) {
+    width: 84px;
+    height: 84px;
+    ${(props) => {
+      const logo = props.logo;
+      return `
+        background-image: url(${logo});
+        background-size: 84px;
+      `;
+    }}
+  }
 `;
 
 //////////////////// Footer ////////////////////
@@ -354,6 +474,11 @@ export const FooterWrapper = styled.div`
 export const FooterBox = styled.div`
   width: 1260px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1200px) {
+    width: 1000px;
+  }
+
 `;
 
 
@@ -366,12 +491,22 @@ export const FooterSiteBox = styled.div`
   line-height: 40px;
   font-size: 16px;
   font-weight: 600;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 14px;
+  }
+
 `;
 
 export const FooterSiteBoxTitle = styled.span`
   color: rgb(60, 93, 144);
   padding: 0 50px 0;
   border-right: 3px solid rgb(219,219,219);
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 40px 0;
+  }
+
 `;
 
 export const FooterSiteBoxEle = styled.span`
@@ -383,6 +518,10 @@ export const FooterSiteBoxEle = styled.span`
     font-weight: 800;
     color: black;
   }
+
+  @media screen and (max-width: 1200px) {
+    padding: 0 50px 0;
+  }
 `;
 
 export const FooterInform = styled.span`
@@ -391,6 +530,9 @@ export const FooterInform = styled.span`
   width: 1260px;
   margin: 0 auto;
   color: rgb(74, 74, 74);
+  @media screen and (max-width: 1200px) {
+    font-size: 14px;
+  }
 `
 
 export const FooterBrochure = styled.div`
