@@ -16,7 +16,7 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   height: 60px;
   background-color: white;
-  z-index: 99999;   // 가장 앞에 쌓임
+  z-index: 99999;
 `;
 
 export const HeaderLogo = styled.div`
@@ -61,9 +61,9 @@ export const HeaderSearchIcon = styled(HiOutlineSearch)`
 export const MenuBarWrapper = styled.div`
   position: absolute;
   width: 100%;
-  top: 60px;    // Header height만큼 떨어진 위치 고정
+  top: 60px;  
   cursor: pointer;
-  z-index: 10;  // MainTop 위에 쌓이도록
+  z-index: 10;
 
   @media screen and (max-width: 1200px) {
     display: none;
@@ -164,18 +164,67 @@ export const SideMenuWrapper = styled.div`
   position: fixed;
   top: 60px;
   right: 0px;
-  width: 500px;
+  width: 400px;
   height: 100%;
+  color: white;
   background-color: rgba(8, 81, 122, 0.8);
-  z-index: 99999;
-  ${(props)=>props.isOpen == 0 ? `transition:.3s; height: 0;`:`transition:.3s; height: 100%;`}
+  z-index: 9999;
+  overflow: auto;
+  ${(props)=>props.isOpen === 0 ? 
+    `transition:.3s; height: 0;`:
+    `transition:.3s; height: 100%;`}
 
   @media screen and (max-width: 1200px) {
     display: block;
   }
 `;
 
+export const SideMenuTitleWrapper = styled.div`
+  
+  ${(props)=>props.isOpen === 1 ? 
+    `
+    width: 300px;
+    height: 50px;
+    border-bottom : 2px solid rgba(139, 139, 139, 1);
+    margin: 20px 0px 0px 20px;
+    padding: 0 10px;
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    `:
+    `display: none`}
+`;
 
+export const SideMenuDetailWrapper = styled.div`
+  
+  ${(props)=>props.isOpen === 1 ? 
+  `display: flex;`: 'display: none;'}
+  flex-direction: column;
+  position: relative;
+  max-height: 1000px;
+  overflow: hidden;
+  cursor: pointer;
+  ${(props)=>props.isMenuOpen === 0 ? 
+    `transition:.3s; max-height: 0;`:`transition: .3s; max-height: 1000px;`} 
+`;
+
+export const SideMenuDetail = styled.div`
+  width: 280px;
+  height: 40px;
+  border-bottom : 1px solid rgba(139, 139, 139, 0.7);
+  margin: 0px 0px 0px 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    font-size: 17px;
+  }
+`;
 
 
 //////////////////// MainTop ////////////////////
@@ -417,7 +466,7 @@ export const ShortCutsMainTitle = styled.div`
 export const ShortCutsSubTitle = styled.div`
   margin : 0px 10px;
   color: rgba(0, 128, 190, 1);
-  z-index: 999; //아이콘에 가려지지 않도록
+  z-index: 999;
 `;
 
 export const ShortCutsContents = styled.div`
@@ -427,7 +476,7 @@ export const ShortCutsContents = styled.div`
   font-size: 14px;
   line-height: 25px;
   color: rgba(119, 119, 119, 1);
-  z-index: 999; //아이콘에 가려지지 않도록
+  z-index: 999;
 
   @media screen and (max-width: 1200px) {
     font-size: 13px;
