@@ -181,26 +181,21 @@ export const SideMenuWrapper = styled.div`
 
 export const SideMenuTitleWrapper = styled.div`
   
-  ${(props)=>props.isOpen === 1 ? 
-    `
-    width: 300px;
-    height: 50px;
-    border-bottom : 2px solid rgba(139, 139, 139, 1);
-    margin: 20px 0px 0px 20px;
-    padding: 0 10px;
-    font-size: 24px;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    `:
-    `display: none`}
+  width: 300px;
+  height: 50px;
+  border-bottom : 2px solid rgba(139, 139, 139, 1);
+  margin: 20px 0px 0px 20px;
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
 `;
 
 export const SideMenuDetailWrapper = styled.div`
   
-  ${(props)=>props.isOpen === 1 ? 
-  `display: flex;`: 'display: none;'}
   flex-direction: column;
   position: relative;
   max-height: 1000px;

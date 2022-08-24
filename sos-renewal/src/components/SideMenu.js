@@ -21,6 +21,13 @@ const SideMenu = () => {
   const sideMenuOpen = () => {
     if (isOpen) {
       setIsOpen(0);
+      setIsIntroduceOpen(0);
+      setIsInformationOpen(0);
+      setIsMasterOpen(0);
+      setIsSwUniversityOpen(0);
+      setIsCertificationOpen(0);
+      setIsSeoulAccordOpen(0);
+      setIsCommunityOpen(0);
     } else {
       setIsOpen(1);
     }
@@ -80,8 +87,8 @@ const SideMenu = () => {
     <>
       <SideMenuIcon onClick={sideMenuOpen} />
       <SideMenuWrapper isOpen={isOpen}>
-        <SideMenuTitleWrapper isOpen={isOpen} onClick={sideMenuIntroduceOpen}>학부 소개</SideMenuTitleWrapper>
-        <SideMenuDetailWrapper isOpen={isOpen} isMenuOpen={isIntroduceOpen}>
+        <SideMenuTitleWrapper onClick={sideMenuIntroduceOpen}>학부 소개</SideMenuTitleWrapper>
+        <SideMenuDetailWrapper isMenuOpen={isIntroduceOpen}>
           <SideMenuDetail>학부장 인사말</SideMenuDetail>
           <SideMenuDetail>연혁</SideMenuDetail>
           <SideMenuDetail>시설</SideMenuDetail>
@@ -90,8 +97,8 @@ const SideMenu = () => {
           <SideMenuDetail>찾아오시는 길</SideMenuDetail>
         </SideMenuDetailWrapper>
 
-        <SideMenuTitleWrapper isOpen={isOpen} onClick={sideMenuInformationOpen}>학사 정보</SideMenuTitleWrapper>
-        <SideMenuDetailWrapper isOpen={isOpen} isMenuOpen={isInformationOpen}>
+        <SideMenuTitleWrapper onClick={sideMenuInformationOpen}>학사 정보</SideMenuTitleWrapper>
+        <SideMenuDetailWrapper isMenuOpen={isInformationOpen}>
           <SideMenuDetail>교육 목표</SideMenuDetail>
           <SideMenuDetail>전공 트랙</SideMenuDetail>
           <SideMenuDetail>교과 과정</SideMenuDetail>
@@ -100,20 +107,20 @@ const SideMenu = () => {
           <SideMenuDetail>Sos프로그램</SideMenuDetail>
         </SideMenuDetailWrapper>
 
-        <SideMenuTitleWrapper isOpen={isOpen} onClick={sideMenuMasterOpen}>대학원</SideMenuTitleWrapper>
-        <SideMenuDetailWrapper isOpen={isOpen} isMenuOpen={isMasterOpen}>
+        <SideMenuTitleWrapper onClick={sideMenuMasterOpen}>대학원</SideMenuTitleWrapper>
+        <SideMenuDetailWrapper isMenuOpen={isMasterOpen}>
           <SideMenuDetail>입학 안내</SideMenuDetail>
           <SideMenuDetail>연구실 소개</SideMenuDetail>
           <SideMenuDetail>과목 개요</SideMenuDetail>
         </SideMenuDetailWrapper>
 
-        <SideMenuTitleWrapper isOpen={isOpen} onClick={sideMenuSwUniversityOpen}>SW중심대학</SideMenuTitleWrapper>
-        <SideMenuDetailWrapper isOpen={isOpen} isMenuOpen={isSwUniversityOpen}>
+        <SideMenuTitleWrapper onClick={sideMenuSwUniversityOpen}>SW중심대학</SideMenuTitleWrapper>
+        <SideMenuDetailWrapper isMenuOpen={isSwUniversityOpen}>
           <SideMenuDetail>스파르탄SW교육원</SideMenuDetail>
         </SideMenuDetailWrapper>
 
-        <SideMenuTitleWrapper isOpen={isOpen} onClick={sideMenuCertificationOpen}>공학 인증</SideMenuTitleWrapper>
-        <SideMenuDetailWrapper isOpen={isOpen} isMenuOpen={isCertificationOpen}>
+        <SideMenuTitleWrapper  onClick={sideMenuCertificationOpen}>공학 인증</SideMenuTitleWrapper>
+        <SideMenuDetailWrapper isMenuOpen={isCertificationOpen}>
           <SideMenuDetail>제도소개</SideMenuDetail>
           <SideMenuDetail>이수체계도</SideMenuDetail>
           <SideMenuDetail>인증대상과 기준</SideMenuDetail>
@@ -122,16 +129,16 @@ const SideMenu = () => {
           <SideMenuDetail>공학인증 FAQ</SideMenuDetail>
         </SideMenuDetailWrapper>
 
-        <SideMenuTitleWrapper isOpen={isOpen} onClick={sideMenuSeoulAccordOpen}>서울 어코드</SideMenuTitleWrapper>
-        <SideMenuDetailWrapper isOpen={isOpen} isMenuOpen={isSeoulAccordOpen}>
+        <SideMenuTitleWrapper onClick={sideMenuSeoulAccordOpen}>서울 어코드</SideMenuTitleWrapper>
+        <SideMenuDetailWrapper isMenuOpen={isSeoulAccordOpen}>
           <SideMenuDetail>사업개요</SideMenuDetail>
           <SideMenuDetail>사업추진체계</SideMenuDetail>
           <SideMenuDetail>인재상</SideMenuDetail>
           <SideMenuDetail>중장기 로드맵</SideMenuDetail>
         </SideMenuDetailWrapper>
 
-        <SideMenuTitleWrapper isOpen={isOpen} onClick={sideMenuCommunityOpen}>커뮤니티</SideMenuTitleWrapper>
-        <SideMenuDetailWrapper isOpen={isOpen} isMenuOpen={isCommunityOpen}>
+        <SideMenuTitleWrapper onClick={sideMenuCommunityOpen}>커뮤니티</SideMenuTitleWrapper>
+        <SideMenuDetailWrapper isMenuOpen={isCommunityOpen}>
           <SideMenuDetail>학부 공지사항</SideMenuDetail>
           <SideMenuDetail>대학원 공지사항</SideMenuDetail>
           <SideMenuDetail>보도자료</SideMenuDetail>
