@@ -6,7 +6,6 @@ import {
   MainTopBoxTitle,
   MainTopBoxDetail,
   MainTopBoxTitleWhite,
-  MainTopImageSlideWrapper,
 } from './StyledComponent';
 import ImageSlider, { Slide } from "react-auto-image-slider";
 import MainPicture3 from '../icons/MainPicture3.jpg';
