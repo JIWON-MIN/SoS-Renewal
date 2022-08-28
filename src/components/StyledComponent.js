@@ -255,7 +255,7 @@ const fadeIn = keyframes`
 `
 const MainTopBoxConSlide = keyframes`
   from {
-    transform: translateX(-300px);
+    transform: translateX(-500px);
   }
   to {
     transform: translateX(0px);
@@ -271,7 +271,7 @@ export const MainTopBox = styled.div`
 
   font-family: 'Gowun Batang', serif;
   z-index: 5;
-  animation: ${fadeIn} 0.8s ease-in-out forwards;
+  animation: ${fadeIn} 2.0s ease-in-out forwards;
 
   @media screen and (max-width: 1000px) {
     width: 50%;
@@ -289,7 +289,7 @@ export const MainTopBoxTitle = styled.div`
   font-weight: 600;
   color: rgb(0, 93, 129);
 
-  animation: ${MainTopBoxConSlide} 1.0s ease-out forwards;
+  animation: ${MainTopBoxConSlide} 2.0s ease-out forwards;
 
   @media screen and (max-width: 1400px) {
     left: 30px;
@@ -323,7 +323,7 @@ export const MainTopBoxDetail = styled.div`
   font-size: 22px;
   line-height: 35px;
 
-  animation: ${MainTopBoxConSlide} 1.5s ease-out forwards;
+  animation: ${MainTopBoxConSlide} 2.5s ease-out forwards;
   
   @media screen and (max-width: 1400px) {
     left: 40px;
