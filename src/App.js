@@ -17,6 +17,21 @@ const ContentsWrapper = styled.div`
   @media screen and (max-width: 1200px) {
     top: 60px;
   }
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+`
+
+//Mobile WIP
+const WIP = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 115px;
+
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
 `
 
 function App() {
@@ -34,6 +49,9 @@ function App() {
         <ShortCuts />
         <Footer />
       </ContentsWrapper>
+
+      {/* Mobile WIP */}
+      <WIP> 모바일 기기 지원 예정입니다! </WIP>
 
     </>
   );

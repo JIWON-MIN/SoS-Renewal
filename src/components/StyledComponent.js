@@ -17,6 +17,15 @@ export const HeaderWrapper = styled.div`
   height: 60px;
   background-color: white;
   z-index: 99999;
+
+
+
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+
+  
 `;
 
 export const HeaderLogo = styled.div`
@@ -66,6 +75,10 @@ export const MenuBarWrapper = styled.div`
   z-index: 10;
 
   @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 500px) {
     display: none;
   }
 
@@ -155,6 +168,10 @@ export const SideMenuIcon = styled(FiMenu)`
 
   @media screen and (max-width: 1200px) {
     display: block;
+  }
+
+  @media screen and (max-width: 500px) {
+    display: none;
   }
 
 `;
