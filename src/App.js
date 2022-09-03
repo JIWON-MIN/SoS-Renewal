@@ -28,6 +28,7 @@ const WIP = styled.div`
   width: 100%;
   height: 100%;
   top: 115px;
+  display: none;
 
   @media screen and (max-width: 500px) {
     display: block;
