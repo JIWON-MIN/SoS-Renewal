@@ -29,7 +29,8 @@ export const HeaderLogo = styled.div`
   cursor : pointer;
 
   @media screen and (max-width: 500px) {
-    margin-left: 60px;
+    justify-content: center;
+    background-size: 160px 40px;
   }
 
 
@@ -245,7 +246,7 @@ export const SideMenuDetail = styled.div`
 
   @media screen and (max-width: 500px) {
     width: 140px;
-    height: 20px;
+    height: 30px;
     margin: 0px 0px 0px 20px;
     padding: 0 5px;
     font-size: 13px;
