@@ -29,8 +29,8 @@ export const HeaderLogo = styled.div`
   cursor : pointer;
 
   @media screen and (max-width: 500px) {
-    justify-content: center;
-    background-size: 160px 40px;
+    margin-left: 10px;
+    background-size: 120px 30px;
   }
 
 
@@ -248,7 +248,7 @@ export const SideMenuDetail = styled.div`
     width: 140px;
     height: 30px;
     margin: 0px 0px 0px 20px;
-    padding: 0 5px;
+    padding: 0 8px;
     font-size: 13px;
   }
 `;
@@ -259,12 +259,17 @@ export const MainTopWrapper = styled.div`
   width: 100%;
   height: 70%;
   overflow: hidden;
+
+  @media screen and (max-width: 500px) {
+    height: 40%;
+  }
+
 `;
 
 export const MainTopImage = styled.div`
   position: absolute;
   width: 120%;
-  height: 70%;
+  height: 40%;
   background-position: bottom;
   ${(props) => {
     const img = props.img;
@@ -446,7 +451,7 @@ export const MainConListElement = styled.div`
   cursor: pointer;
 
   @media screen and (max-width: 500px) {
-    height: 40px;
+    height: 30px;
   }
 `;
 
