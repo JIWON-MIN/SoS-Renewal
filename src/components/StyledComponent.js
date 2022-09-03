@@ -30,7 +30,7 @@ export const HeaderLogo = styled.div`
 
   @media screen and (max-width: 500px) {
     margin-left: 10px;
-    background-size: 120px 30px;
+    background-size: 160px 40px;
   }
 
 
@@ -410,7 +410,7 @@ export const MainConBox = styled.div`
   @media screen and (max-width: 500px) {
     width: 400px;
     height: 300px;
-    margin: 10px;
+    margin: 20px;
   }
 
 `;
@@ -451,7 +451,7 @@ export const MainConListElement = styled.div`
   cursor: pointer;
 
   @media screen and (max-width: 500px) {
-    height: 30px;
+    height: 35px;
   }
 `;
 
