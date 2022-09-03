@@ -269,7 +269,7 @@ export const MainTopWrapper = styled.div`
 export const MainTopImage = styled.div`
   position: absolute;
   width: 120%;
-  height: 40%;
+  height: 70%;
   background-position: bottom;
   ${(props) => {
     const img = props.img;
