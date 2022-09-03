@@ -437,7 +437,7 @@ export const MainConListWrapper = styled.div`
   margin-top: 10px;
 
   @media screen and (max-width: 500px) {
-    height: 240px;
+    height: 300px;
   }
 `;
 
