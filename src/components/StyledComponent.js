@@ -409,7 +409,7 @@ export const MainConBox = styled.div`
 
   @media screen and (max-width: 500px) {
     width: 400px;
-    height: 300px;
+    height: 350px;
     margin: 20px;
   }
 
@@ -437,7 +437,7 @@ export const MainConListWrapper = styled.div`
   margin-top: 10px;
 
   @media screen and (max-width: 500px) {
-    height: 300px;
+    height: 350px;
   }
 `;
 
