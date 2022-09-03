@@ -16,16 +16,7 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   height: 60px;
   background-color: white;
-  z-index: 99999;
-
-
-
-
-  @media screen and (max-width: 500px) {
-    display: none;
-  }
-
-  
+  z-index: 99999;  
 `;
 
 export const HeaderLogo = styled.div`
@@ -36,6 +27,12 @@ export const HeaderLogo = styled.div`
   height: 48px;
   margin-left: 120px;
   cursor : pointer;
+
+  @media screen and (max-width: 500px) {
+    margin-left: 60px;
+  }
+
+
 `;
 
 export const HeaderSearchBox = styled.div`
@@ -48,6 +45,12 @@ export const HeaderSearchBox = styled.div`
   background: #FFFFFF;
   border: 1px solid #BBBBBB;
   border-radius: 10px;
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+
+
 `;
 
 export const HeaderSearchInput = styled.input`
@@ -77,11 +80,6 @@ export const MenuBarWrapper = styled.div`
   @media screen and (max-width: 1200px) {
     display: none;
   }
-
-  @media screen and (max-width: 500px) {
-    display: none;
-  }
-
 `;
 
 export const MenuBarTitleWrapper = styled.div`
@@ -170,10 +168,6 @@ export const SideMenuIcon = styled(FiMenu)`
     display: block;
   }
 
-  @media screen and (max-width: 500px) {
-    display: none;
-  }
-
 `;
 
 export const SideMenuWrapper = styled.div`
@@ -194,6 +188,10 @@ export const SideMenuWrapper = styled.div`
   @media screen and (max-width: 1200px) {
     display: block;
   }
+
+  @media screen and (max-width: 500px) {
+    width: 200px;
+  }
 `;
 
 export const SideMenuTitleWrapper = styled.div`
@@ -208,6 +206,14 @@ export const SideMenuTitleWrapper = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+
+  @media screen and (max-width: 500px) {
+    width: 150px;
+    height: 30px;
+    margin: 10px 0px 0px 10px;
+    padding: 0 5px;
+    font-size: 15px;
+  }
 
 `;
 
@@ -235,6 +241,14 @@ export const SideMenuDetail = styled.div`
   cursor: pointer;
   &:hover {
     font-size: 17px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 140px;
+    height: 20px;
+    margin: 0px 0px 0px 20px;
+    padding: 0 5px;
+    font-size: 13px;
   }
 `;
 
@@ -370,6 +384,11 @@ export const MainConWrapper = styled.div`
     display: block;
   }
 
+  @media screen and (max-width: 500px) {
+    margin: 10px 0px 10px 0px;
+  }
+  
+
 `;
 
 export const MainConBox = styled.div`
@@ -380,6 +399,12 @@ export const MainConBox = styled.div`
   @media screen and (max-width: 1200px) {
     width: 800px;
     margin: 30px auto;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 400px;
+    height: 300px;
+    margin: 10px;
   }
 
 `;
@@ -404,6 +429,10 @@ export const MainConListWrapper = styled.div`
   position: relative;
   height: 400px;
   margin-top: 10px;
+
+  @media screen and (max-width: 500px) {
+    height: 240px;
+  }
 `;
 
 export const MainConListElement = styled.div`
@@ -414,6 +443,10 @@ export const MainConListElement = styled.div`
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+
+  @media screen and (max-width: 500px) {
+    height: 40px;
+  }
 `;
 
 export const MainConListTitle = styled.div`
@@ -426,6 +459,10 @@ export const MainConListTitle = styled.div`
 
   @media screen and (max-width: 1200px) {
     width: 700px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 350px;
   }
 `;
 
